@@ -10,36 +10,23 @@ import SwiftData
 
 @main
 struct GalaxyPlanetsApp: App {
-    
-
     let container = try! ModelContainer(for: PlanetModel.self)
     let dataLoader = PlanetsLoader()
+    let dataImporter: DataImporter
     
-    @MainActor
-    private func fetchPlanetsData() async {
-        let context = container.mainContext
-        
-        do {
-            
-            let planets = try await dataLoader.fetchPlanets()
-            
-//            if !planets.isEmpty {
-//                planets.forEach { planet in
-//                    let model = PlanetModel(name: planet.name)
-//                    context.insert(model)
-//                }
-//            }
-            
-        } catch {
-            print(error)
-        }
+    init(){
+        self.dataImporter = DataImporter(context: container.mainContext, dataLoader: dataLoader)
     }
     
     var body: some Scene {
         WindowGroup {
             PlanetsView()
                 .task {
-                    await fetchPlanetsData()
+                    do {
+                        try await dataImporter.fetchPlanetsData()
+                    } catch {
+                        print(error)
+                    }
                 }
         }.modelContainer(container)
     }

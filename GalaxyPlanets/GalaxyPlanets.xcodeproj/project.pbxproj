@@ -21,6 +21,7 @@
 		5EF499C52D44B8D2003D0AFC /* PlanetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF499C42D44B8D2003D0AFC /* PlanetModel.swift */; };
 		5EF499C82D44C567003D0AFC /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF499C72D44C567003D0AFC /* Title.swift */; };
 		5EF499CB2D44C5A0003D0AFC /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF499CA2D44C5A0003D0AFC /* View+Extensions.swift */; };
+		5EF499D22D456365003D0AFC /* DataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF499D12D456365003D0AFC /* DataImporter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		5EF499C42D44B8D2003D0AFC /* PlanetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetModel.swift; sourceTree = "<group>"; };
 		5EF499C72D44C567003D0AFC /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		5EF499CA2D44C5A0003D0AFC /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		5EF499D12D456365003D0AFC /* DataImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataImporter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				5EF499BF2D41F2C6003D0AFC /* PlanetService.swift */,
+				5EF499D12D456365003D0AFC /* DataImporter.swift */,
 			);
 			path = APIService;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				5EF499B92D41EFDE003D0AFC /* PlanetsViewModel.swift in Sources */,
 				5EF499892D41EA53003D0AFC /* GalaxyPlanetsApp.swift in Sources */,
 				5EF499BD2D41F0BC003D0AFC /* Planet.swift in Sources */,
+				5EF499D22D456365003D0AFC /* DataImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
