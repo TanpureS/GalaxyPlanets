@@ -1,16 +1,17 @@
 //
-//  FakeDataImporter.swift
-//  GalaxyPlanets
+//  DataImporterMock.swift
+//  GalaxyPlanetsTests
 //
 //  Created by Shivaji Tanpure on 27/01/25.
 //
 
-import Foundation
- 
-struct FakeDataImporter: PlanetImporter {
+import XCTest
+@testable import GalaxyPlanets
+
+struct DataImporterMock: PlanetImporter {
     
     func checkIfPlanetsSavedLocally() throws -> Bool {
-        false
+        true
     }
     
     func fetchPlanetsData() async throws -> [PlanetUIViewModel] {

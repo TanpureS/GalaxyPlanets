@@ -11,7 +11,7 @@
 		5EF4998B2D41EA53003D0AFC /* PlanetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4998A2D41EA53003D0AFC /* PlanetsView.swift */; };
 		5EF4998D2D41EA55003D0AFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF4998C2D41EA55003D0AFC /* Assets.xcassets */; };
 		5EF499902D41EA55003D0AFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF4998F2D41EA55003D0AFC /* Preview Assets.xcassets */; };
-		5EF4999A2D41EA55003D0AFC /* GalaxyPlanetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF499992D41EA55003D0AFC /* GalaxyPlanetsTests.swift */; };
+		5EF4999A2D41EA55003D0AFC /* PlanetsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF499992D41EA55003D0AFC /* PlanetsViewModelTests.swift */; };
 		5EF499A42D41EA55003D0AFC /* GalaxyPlanetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF499A32D41EA55003D0AFC /* GalaxyPlanetsUITests.swift */; };
 		5EF499A62D41EA55003D0AFC /* GalaxyPlanetsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF499A52D41EA55003D0AFC /* GalaxyPlanetsUITestsLaunchTests.swift */; };
 		5EF499B92D41EFDE003D0AFC /* PlanetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF499B82D41EFDE003D0AFC /* PlanetsViewModel.swift */; };
@@ -25,6 +25,7 @@
 		5EF499D42D472A02003D0AFC /* PlanetUIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF499D32D472A01003D0AFC /* PlanetUIViewModel.swift */; };
 		5EF499D62D472D70003D0AFC /* FakeDataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF499D52D472D70003D0AFC /* FakeDataImporter.swift */; };
 		5EF499DA2D473E63003D0AFC /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF499D92D473E63003D0AFC /* ViewState.swift */; };
+		5EF499DD2D474347003D0AFC /* DataImporterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF499DC2D474347003D0AFC /* DataImporterMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +52,7 @@
 		5EF4998C2D41EA55003D0AFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EF4998F2D41EA55003D0AFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5EF499952D41EA55003D0AFC /* GalaxyPlanetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalaxyPlanetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EF499992D41EA55003D0AFC /* GalaxyPlanetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxyPlanetsTests.swift; sourceTree = "<group>"; };
+		5EF499992D41EA55003D0AFC /* PlanetsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewModelTests.swift; sourceTree = "<group>"; };
 		5EF4999F2D41EA55003D0AFC /* GalaxyPlanetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalaxyPlanetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF499A32D41EA55003D0AFC /* GalaxyPlanetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxyPlanetsUITests.swift; sourceTree = "<group>"; };
 		5EF499A52D41EA55003D0AFC /* GalaxyPlanetsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxyPlanetsUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 		5EF499D32D472A01003D0AFC /* PlanetUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetUIViewModel.swift; sourceTree = "<group>"; };
 		5EF499D52D472D70003D0AFC /* FakeDataImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataImporter.swift; sourceTree = "<group>"; };
 		5EF499D92D473E63003D0AFC /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		5EF499DC2D474347003D0AFC /* DataImporterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataImporterMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +138,8 @@
 		5EF499982D41EA55003D0AFC /* GalaxyPlanetsTests */ = {
 			isa = PBXGroup;
 			children = (
-				5EF499992D41EA55003D0AFC /* GalaxyPlanetsTests.swift */,
+				5EF499DB2D47431F003D0AFC /* Stub */,
+				5EF499992D41EA55003D0AFC /* PlanetsViewModelTests.swift */,
 			);
 			path = GalaxyPlanetsTests;
 			sourceTree = "<group>";
@@ -254,6 +257,14 @@
 				5EF499CA2D44C5A0003D0AFC /* View+Extensions.swift */,
 			);
 			path = "View+Extensions";
+			sourceTree = "<group>";
+		};
+		5EF499DB2D47431F003D0AFC /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				5EF499DC2D474347003D0AFC /* DataImporterMock.swift */,
+			);
+			path = Stub;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,7 +417,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EF4999A2D41EA55003D0AFC /* GalaxyPlanetsTests.swift in Sources */,
+				5EF4999A2D41EA55003D0AFC /* PlanetsViewModelTests.swift in Sources */,
+				5EF499DD2D474347003D0AFC /* DataImporterMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

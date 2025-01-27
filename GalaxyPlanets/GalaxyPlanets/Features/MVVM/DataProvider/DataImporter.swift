@@ -9,6 +9,7 @@ import SwiftData
 import SwiftUI
 
 protocol PlanetImporter {
+    func checkIfPlanetsSavedLocally() throws -> Bool
     @MainActor func fetchPlanetsData() async throws -> [PlanetUIViewModel]
 }
 
@@ -24,13 +25,15 @@ final class DataImporter: PlanetImporter {
         self.dataLoader = dataLoader
     }
     
-    @MainActor
-    func fetchPlanetsData() async throws -> [PlanetUIViewModel] {
+    func checkIfPlanetsSavedLocally() throws -> Bool {
         var descriptor = FetchDescriptor<PlanetModel>()
         descriptor.fetchLimit = 1
-        let persistedPlanets = try context.fetch(descriptor)
-        
-        if persistedPlanets.isEmpty {
+        return try context.fetch(descriptor).isEmpty
+    }
+    
+    @MainActor
+    func fetchPlanetsData() async throws -> [PlanetUIViewModel] {
+        if try checkIfPlanetsSavedLocally() {
             return try await fetchPlanetsFromAPI()
         } else {
             return try await fetchPlanetsFromLocalStorage()
