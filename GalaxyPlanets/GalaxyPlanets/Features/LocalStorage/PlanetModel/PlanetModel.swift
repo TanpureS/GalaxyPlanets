@@ -8,6 +8,10 @@
 import Foundation
 import SwiftData
 
+/*
+    PlanetModel SwiftData model used to persists data into local database
+*/
+
 @Model
 class PlanetModel: Identifiable {
     let id: String

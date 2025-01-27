@@ -6,6 +6,10 @@
 //
 
 import Foundation
+
+/*
+    FakeDataImporter user for previews
+*/
  
 struct FakeDataImporter: PlanetImporter {
     

@@ -7,6 +7,11 @@
 
 import Foundation
 
+/*
+    NetworkManager class stores api host url's and end points.
+    Can be extendable for handling SSL pinning to avoid Man In The Middle attack
+*/
+
 final class NetworkManager: NSObject {
     // MARK: Properties
     

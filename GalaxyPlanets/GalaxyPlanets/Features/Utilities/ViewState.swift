@@ -7,6 +7,10 @@
 
 import Foundation
 
+/*
+    State used by view model & view to re-render based on state value
+*/
+
 enum State {
     case idle
     case loading

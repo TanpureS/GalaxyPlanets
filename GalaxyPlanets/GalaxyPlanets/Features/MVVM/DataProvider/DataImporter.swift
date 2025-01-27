@@ -8,6 +8,10 @@
 import SwiftData
 import SwiftUI
 
+/*
+    PlanetImporter is data provider class primarily check if the data is already stored locally else it will fetch from API and saved locally
+*/
+
 protocol PlanetImporter {
     func checkIfPlanetsSavedLocally() throws -> Bool
     @MainActor func fetchPlanetsData() async throws -> [PlanetUIViewModel]

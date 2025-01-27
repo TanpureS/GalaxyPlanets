@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// Title style modifier 
+
 struct Title: ViewModifier {
     func body(content: Content) -> some View {
         content

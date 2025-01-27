@@ -7,7 +7,9 @@
 
 import Foundation
 
-// PlanetUIViewModel used to display data on UI View
+/*
+    PlanetUIViewModel used to display data on UI View
+*/
 
 struct PlanetUIViewModel: Identifiable {
     let id: String

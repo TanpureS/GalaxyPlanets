@@ -7,6 +7,10 @@
 
 import Foundation
 
+/*
+    PlanetResponse DTO
+ */
+
 struct PlanetResponse: Decodable {
     let results: [Planet]
 }

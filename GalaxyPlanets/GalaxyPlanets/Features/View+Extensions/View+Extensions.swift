@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// View title style modifier extension
+
 extension View {
     func titleStyle() -> some View {
         modifier(Title())

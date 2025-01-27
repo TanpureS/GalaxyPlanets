@@ -7,6 +7,10 @@
 
 import Foundation
 
+/*
+    PlanetsLoader utility used for fetching planets data asynchronously from API first time when app launch
+*/
+
 final class PlanetsLoader {
     
     // MARK: API

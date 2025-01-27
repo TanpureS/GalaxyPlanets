@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/*
+    PlanetsViewModel used to fetch data from resource & display on UI
+*/
+
 final class PlanetsViewModel: ObservableObject {
     let dataImporter: PlanetImporter
     @Published private(set) var state = State.idle
