@@ -7,11 +7,7 @@
 
 import Foundation
 
-protocol PlanetService: AnyObject {
-    func fetchPlanets() async throws -> [Planet]
-}
-
-final class PlanetsLoader: PlanetService {
+final class PlanetsLoader {
     
     // MARK: API
     func fetchPlanets() async throws -> [Planet] {

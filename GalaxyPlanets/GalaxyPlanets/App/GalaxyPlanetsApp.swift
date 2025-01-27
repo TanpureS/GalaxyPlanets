@@ -11,22 +11,17 @@ import SwiftData
 @main
 struct GalaxyPlanetsApp: App {
     let container = try! ModelContainer(for: PlanetModel.self)
-    let dataLoader = PlanetsLoader()
-    let dataImporter: DataImporter
+    let viewModel: PlanetsViewModel
     
     init(){
-        self.dataImporter = DataImporter(context: container.mainContext, dataLoader: dataLoader)
+        self.viewModel = PlanetsViewModel(dataImporter: DataImporter(context: container.mainContext, dataLoader: PlanetsLoader()))
     }
     
     var body: some Scene {
         WindowGroup {
-            PlanetsView()
+            PlanetsView(viewModel: viewModel)
                 .task {
-                    do {
-                        try await dataImporter.fetchPlanetsData()
-                    } catch {
-                        print(error)
-                    }
+                    viewModel.loadData()
                 }
         }.modelContainer(container)
     }

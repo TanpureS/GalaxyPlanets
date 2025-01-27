@@ -10,22 +10,42 @@ import SwiftData
 
 struct PlanetsView: View {
     
-    @Query private var planets: [PlanetModel]
+    @ObservedObject var viewModel: PlanetsViewModel
+
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(planets) { planet in
-                    Text(planet.name)
-                        .titleStyle()
+            
+            switch viewModel.state {
+                
+            case .idle:
+                EmptyView()
+                
+            case .loading:
+                ProgressView()
+                
+            case .failed:
+                EmptyView()
+                
+            case .loaded(let planets):
+                List {
+                    ForEach(planets) { planet in
+                        Text(planet.name)
+                            .titleStyle()
+                    }
                 }
+                .navigationTitle("Planets")
             }
-            .navigationTitle("Planets")
         }
     }
 }
 
+
 #Preview {
-    PlanetsView()
+    PlanetsView(
+        viewModel: PlanetsViewModel(
+                        dataImporter: FakeDataImporter()
+                    )
+            )
 }
 
 
